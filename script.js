@@ -1,4 +1,4 @@
-const apiKey = 'YOUR_OPENWEATHERMAP_API_KEY'; // Replace with your OpenWeatherMap API key
+const apiKey = 'c1eed8827b988c2b80cb704f824d867a'; // Replace with your OpenWeatherMap API key
 const unsplashApiKey = 'YOUR_UNSPLASH_API_KEY'; // Replace with your Unsplash API key
 
 document.getElementById('get-weather').addEventListener('click', function() {
