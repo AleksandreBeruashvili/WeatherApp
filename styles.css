@@ -1,4 +1,4 @@
-/* Base Styles */
+
 body {
     margin: 0;
     font-family: 'Arial', sans-serif;
@@ -10,7 +10,7 @@ body {
     color: #fff;
 }
 
-/* Container Styles */
+
 .weather-container {
     background-color: rgba(255, 255, 255, 0.1);
     padding: 30px;
@@ -27,7 +27,6 @@ h2, h3 {
     font-size: 1.5rem;
 }
 
-/* Input Field */
 input {
     padding: 10px 15px;
     width: 100%;
@@ -39,7 +38,6 @@ input {
     margin-bottom: 20px;
 }
 
-/* Button */
 button {
     padding: 10px 20px;
     border: none;
@@ -55,13 +53,12 @@ button:hover {
     background-color: #ff7f50;
 }
 
-/* Temperature Display */
+
 #temperature {
     font-size: 2rem;
     margin-top: 15px;
 }
 
-/* City Image */
 #city-image {
     width: 100%;
     max-width: 400px;
@@ -70,7 +67,7 @@ button:hover {
     display: none;
 }
 
-/* Responsive Design */
+
 @media (max-width: 500px) {
     h2, h3 {
         font-size: 1.2rem;

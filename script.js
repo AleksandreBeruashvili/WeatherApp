@@ -1,10 +1,9 @@
-const apiKey = 'c1eed8827b988c2b80cb704f824d867a'; // Replace with your OpenWeatherMap API key
-const unsplashApiKey = 'YOUR_UNSPLASH_API_KEY'; // Replace with your Unsplash API key
+const apiKey = 'c1eed8827b988c2b80cb704f824d867a';
+const unsplashApiKey = 'YOUR_UNSPLASH_API_KEY';
 
 document.getElementById('get-weather').addEventListener('click', function() {
     const city = document.getElementById('city-input').value;
 
-    // Fetch weather data
     const weatherUrl = `https://api.openweathermap.org/data/2.5/weather?q=${city}&appid=${apiKey}&units=metric`;
     fetch(weatherUrl)
         .then(response => response.json())
@@ -14,14 +13,13 @@ document.getElementById('get-weather').addEventListener('click', function() {
                 document.getElementById('city-name').textContent = city;
                 document.getElementById('temperature').textContent = `${temperature}°C`;
 
-                // Change color based on temperature
                 if (temperature >= 30) {
                     document.getElementById('temperature').style.color = "red";
                 } else {
                     document.getElementById('temperature').style.color = "blue";
+                    
                 }
 
-                // Fetch city image from Unsplash
                 const unsplashUrl = `https://api.unsplash.com/search/photos?query=${city}&client_id=${unsplashApiKey}&orientation=landscape&per_page=1`;
                 fetch(unsplashUrl)
                     .then(response => response.json())
@@ -30,7 +28,7 @@ document.getElementById('get-weather').addEventListener('click', function() {
                             const imageUrl = imageData.results[0].urls.regular;
                             const cityImage = document.getElementById('city-image');
                             cityImage.src = imageUrl;
-                            cityImage.style.display = 'block'; // Show the image
+                            cityImage.style.display = 'block';
                         }
                     })
                     .catch(error => console.error('Error fetching city image:', error));
